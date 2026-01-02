@@ -1,0 +1,72 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Updated Logo Styling */
+.logo {
+  height: 5em;
+  padding: 1em;
+  will-change: filter;
+  transition: filter 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dior Gold Glow instead of Blue */
+.logo:hover {
+  filter: drop-shadow(0 0 2em hsl(40 60% 50% / 0.6));
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em hsl(40 60% 50% / 0.8));
+}
+
+/* The Spin Animation you wanted */
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo-animate {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Luxury Card Utility */
+.card-luxury {
+  padding: 2em;
+  background: hsl(var(--cream));
+  border: 1px solid hsl(var(--border));
+  border-radius: 0px; /* Dior uses sharp edges for luxury */
+  transition: border-color 0.5s ease;
+}
+
+.card-luxury:hover {
+  border-color: hsl(var(--gold));
+}
+
+/* Elegant Underline for Links */
+.link-elegant {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-elegant::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: hsl(var(--gold));
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.link-elegant:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

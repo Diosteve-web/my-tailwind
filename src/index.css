@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
+
+:root { 
+ --background: 0 0% 98%;      /* Chalk White (Very light grey/white) */
+  --foreground: 0 0% 12%;      /* Dior Anthracite (Soft Black) */
+  
+  --primary: 0 0% 12%;         /* Deep Charcoal */
+  --primary-foreground: 0 0% 98%;
+
+  --gold: 38 45% 65%;          /* Montaigne Gold (Champagne tone, not yellow) */
+  --gold-muted: 38 30% 90%;    /* Soft Pearl Gold */
+  
+  --cream: 30 20% 97%;         /* Silk Ivory */
+  --border: 0 0% 88%;          /* Light Stone Grey */
+
+  /* Dark Mode specific palette */
+  &.dark {
+    --background: 0 0% 7%;      /* Obsidian Black */
+    --foreground: 30 20% 97%;   /* Silk Ivory */
+    --border: 0 0% 15%;
+    --gold: 38 45% 55%;         /* Burnished Gold */
+}
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  /* Remove the 'place-items: center' to allow normal scrolling */
+  display: block; 
+}
+
+/* Luxury Headers */
+h1, h2, h3, h4, .font-display {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.1em;
+}
+
+/* Global Transition */
+* {
+  transition: all 0.3s ease-in-out;
+  border-color: hsl(var(--border));
+}
